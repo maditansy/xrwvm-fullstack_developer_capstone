@@ -124,3 +124,19 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.contact-container {
+    background-color: lightgray;
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: rgb(97, 64, 128);
+}
+
+h1 {
+    color: darkturquoise;
+}
