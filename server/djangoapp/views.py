@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
 from django.contrib import messages
 from django.http import JsonResponse
@@ -112,7 +110,8 @@ def get_dealer_reviews(request, dealer_id):
 
         return JsonResponse({"status": 200, "reviews": reviews})
     else:
-        return JsonResponse({"status": 400, "message": "Bad Request"})
+        return JsonResponse({"status": 400, 
+                             "message": "Bad Request"})
 
 
 def get_dealer_details(request, dealer_id):
@@ -138,7 +137,8 @@ def add_review(request):
             return JsonResponse({"status": 200})
         except Exception as err:
             logger.error(f"Error in posting review: {err}")
-            return JsonResponse({"status": 401, "message": "Error in posting review"})
+            return JsonResponse({"status": 401,
+                                 "message": "Error in posting review"})
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
 
