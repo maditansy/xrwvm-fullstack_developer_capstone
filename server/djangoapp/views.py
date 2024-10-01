@@ -106,7 +106,7 @@ def get_dealer_reviews(request, dealer_id):
             if response and 'sentiment' in response:
                 review_detail['sentiment'] = response['sentiment']
             else:
-                review_detail['sentiment'] = 'Unavailable'  # Default value if sentiment analysis fails
+                review_detail['sentiment'] = 'Unavailable'
 
         return JsonResponse({"status": 200, "reviews": reviews})
     else:
