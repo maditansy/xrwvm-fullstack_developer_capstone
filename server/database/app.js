@@ -6,7 +6,7 @@ const  cors = require('cors');
 const app = express();
 const port = 3030;
 
-app.use(cors())
+app.use(cors());
 app.use(require('body-parser').urlencoded({ extended: false }));
 
 const reviews_data = JSON.parse(fs.readFileSync("reviews.json", 'utf8'));
@@ -104,7 +104,7 @@ app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
 		"dealership": data.dealership,
 		"review": data.review,
 		"purchase": data.purchase,
-		"purchase_date": data..purchase_date,
+		"purchase_date": data.purchase_date,
 		"car_make": data.car_make,
 		"car_model": data.car_model,
 		"car_year": data.car_year,
