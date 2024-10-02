@@ -10,6 +10,7 @@ Car dealership website using Django and MongoDB - users can log in, log out, vie
 - Deploying serverless applications on Code Engine 
 - Creating and invoking RESTful microservices
 
+```bash
 # To run the project, you will need 3 terminals:
 
 ## 1. MongoDB (Terminal 1)
@@ -31,3 +32,4 @@ python3 -m pip install -U -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
+```
